@@ -11,8 +11,9 @@ class BestSellerItem extends StatelessWidget {
    height: 125, 
       child:  Row(
         children: [
-       ImageBestSeller(),
-      BestSellerBody()
+        ImageBestSeller(),
+        SizedBox(width: 30,),
+        BestSellerBody()
        
          ]
       ),

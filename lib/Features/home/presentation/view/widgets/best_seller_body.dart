@@ -1,8 +1,9 @@
-
-
+import 'package:bookly/Features/home/presentation/view/widgets/book_price_row.dart';
 import 'package:bookly/constance.dart';
 import 'package:bookly/core/utils/text_stayles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BestSellerBody extends StatelessWidget {
   const BestSellerBody({
@@ -11,36 +12,34 @@ class BestSellerBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text("Harry Potter Golbet of fire",
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-      style: TextStyles.textStyle20.copyWith(fontFamily: kGtSectraFine,),),
-      const Text('j.k. rowling',style: TextStyles.textStyle14,),
-      const CustomPriceRow()
-        ],
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.only(right: 8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.5,
+              child: Text(
+                "Harry Potter and the Golbet of fire",
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyles.textStyle20.copyWith(
+                  fontFamily: kGtSectraFine,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 3,
+            ),
+            const Text(
+              'j.k. rowling',
+              style: TextStyles.textStyle14,
+            ),
+            const BookPriceRow()
+          ],
+        ),
       ),
-    );
-  }
-}
-
-class CustomPriceRow extends StatelessWidget {
-  const CustomPriceRow({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text('19.99  ',style: TextStyles.textStyle20,),
-        Text('15.99',style: TextStyles.textStyle16,),
-      ],
     );
   }
 }
