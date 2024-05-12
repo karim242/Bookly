@@ -14,7 +14,7 @@ class FeaturedListView extends StatelessWidget {
               itemCount: 10,
               itemBuilder: (context, index) {
                 return const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 5.0),
+                  padding: EdgeInsets.only(right: 10.0),
                   child: FeatureItem(),
                 );
               },
