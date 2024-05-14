@@ -1,24 +1,17 @@
- 
- 
+
 import 'package:bookly/core/utils/text_stayles.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class BookPriceRow extends StatelessWidget {
-  const BookPriceRow({
-    super.key 
-  });
+class BookRating extends StatelessWidget {
+  const BookRating({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return  Row(
-
+    return  Row (
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
-          '19.99  ',
-          style: TextStyles.textStyle20,
-        ),
-        const Spacer(),
-       const Icon(
+            const Icon(
           FontAwesomeIcons.solidStar,
           size: 14,
           color: Color(0xffFFDD4F),
