@@ -1,5 +1,4 @@
 import 'package:bookly/Features/home/presentation/view/widgets/book_detailes_image.dart';
-import 'package:bookly/Features/home/presentation/view/widgets/book_price_row.dart';
 import 'package:bookly/Features/home/presentation/view/widgets/book_rating.dart';
 import 'package:bookly/core/utils/text_stayles.dart';
 import 'package:flutter/material.dart';
@@ -20,10 +19,10 @@ class BookeDetailsSections extends StatelessWidget {
           child: const BookDetailesImage(),
         ),
         const SizedBox(
-          height: 43,
+          height: 30,
         ),
         Text(
-          "Harry Potter and the Golbet of fire",
+          "Harry Potter ",
           style: TextStyles.textStyle30.copyWith(
             fontWeight: FontWeight.bold,
           ),
@@ -32,17 +31,21 @@ class BookeDetailsSections extends StatelessWidget {
          const SizedBox(
           height: 6,
         ),
-         Text( 
-             'j.k. rowling',
-             
-            style: TextStyles.textStyle18.copyWith(
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.w500,
-            ),
-         
-        ),
+         Opacity(
+
+           opacity: 0.7,
+           child: Text( 
+               'j.k. rowling',
+               
+              style: TextStyles.textStyle18.copyWith(
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.w500,
+              ),
+           
+                   ),
+         ),
         const SizedBox(
-          height: 18,
+          height: 10,
         ),
          const BookRating(
          )
