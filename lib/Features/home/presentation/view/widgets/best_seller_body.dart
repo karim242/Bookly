@@ -3,7 +3,6 @@ import 'package:bookly/constance.dart';
 import 'package:bookly/core/utils/text_stayles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BestSellerBody extends StatelessWidget {
   const BestSellerBody({
