@@ -28,27 +28,23 @@ class BookeDetailsSections extends StatelessWidget {
           ),
           textAlign: TextAlign.center,
         ),
-         const SizedBox(
+        const SizedBox(
           height: 6,
         ),
-         Opacity(
-
-           opacity: 0.7,
-           child: Text( 
-               'j.k. rowling',
-               
-              style: TextStyles.textStyle18.copyWith(
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.w500,
-              ),
-           
-                   ),
-         ),
+        Opacity(
+          opacity: 0.7,
+          child: Text(
+            'j.k. rowling',
+            style: TextStyles.textStyle18.copyWith(
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ),
         const SizedBox(
           height: 10,
         ),
-         const BookRating(
-         )
+        const BookRating()
       ],
     );
   }

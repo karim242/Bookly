@@ -1,5 +1,3 @@
-
-
 import 'package:bookly/Features/home/presentation/view/widgets/similar_books_list_view.dart';
 import 'package:bookly/core/utils/text_stayles.dart';
 import 'package:flutter/material.dart';

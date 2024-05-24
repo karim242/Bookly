@@ -6,19 +6,18 @@ class ImageBestSeller extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  AspectRatio(aspectRatio: 2.5/4, 
-    child: Container(
-      decoration: BoxDecoration(
-        color: Colors.red,
-        borderRadius: BorderRadius.circular(8),
-        image: DecorationImage(
-          image:  AssetImage(
-            AssetsData.testImage),
-          fit: BoxFit.fill,
+    return AspectRatio(
+      aspectRatio: 2.5 / 4,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.red,
+          borderRadius: BorderRadius.circular(8),
+          image: DecorationImage(
+            image: AssetImage(AssetsData.testImage),
+            fit: BoxFit.fill,
+          ),
         ),
       ),
-      
-    ),);
-
+    );
   }
 }
