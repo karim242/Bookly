@@ -7,5 +7,5 @@ final sl = GetIt.instance;
 
 void setupServiceLocator() {
   sl.registerSingleton<ApiService>(ApiService(Dio()));
-  sl.registerSingleton<HomeRepositoryImpl>(HomeRepositoryImpl(apiService: sl()));
+  sl.registerSingleton<HomeRepositoryImpl>(HomeRepositoryImpl(apiService: sl.get<ApiService>()));
 } 
