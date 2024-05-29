@@ -18,16 +18,16 @@ class HomeRepositoryImpl extends HomeRepo {
               'volumes?Filtering=free-ebooks&Sorting=newest &q=computer science');
       List<BookModels> books = [];
       for (var item in data['items']) {
-        try {
+      //  try {
           books.add(BookModels.fromJson(item));
-        } catch (e) {
-          books.add(BookModels.fromJson(item));
-        }
+//} catch (e) {
+       //   books.add(BookModels.fromJson(item));
+      //  }
       }
 
       return right(books);
     } catch (e) {
-      if (e is DioError) {
+      if (e is DioException) {
         return left(
           ServerFailure.fromDioError(e),
         );
@@ -52,7 +52,7 @@ class HomeRepositoryImpl extends HomeRepo {
 
       return right(books);
     } catch (e) {
-      if (e is DioError) {
+      if (e is DioException ) {
         return left(
           ServerFailure.fromDioError(e),
         );

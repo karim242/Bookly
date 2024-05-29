@@ -3,17 +3,19 @@ import 'package:bookly/core/utils/text_stayles.dart';
 import 'package:flutter/material.dart';
 
 class BookPriceRow extends StatelessWidget {
-  const BookPriceRow({super.key});
+  const BookPriceRow({super.key,required this.bookRating, required this.ratingsCount});
+  final int? bookRating;
+final int? ratingsCount;
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return  Row(
       children: [
-        Text(
-          '19.99  ',
+        const Text(
+          'Free ',
           style: TextStyles.textStyle20,
         ),
-        Spacer(),
-        BookRating()
+        const Spacer(),
+        BookRating(bookRating: bookRating!, ratingsCount: ratingsCount!,)
       ],
     );
   }
