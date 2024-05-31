@@ -19,7 +19,7 @@ final BookModels bookModels;
           const  CustomBookDetailesAppBar(),
             BookeDetailsSections(book: bookModels,),
           const  SizedBox(height: 20),
-           const BooksActions(),
+            BooksActions(book: bookModels,),
            const Expanded(
               child: SizedBox(
                 height: 30,
