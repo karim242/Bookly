@@ -10,10 +10,12 @@ class BookDetailsBody extends StatelessWidget {
 final BookModels bookModels;
   @override
   Widget build(BuildContext context) {
-    return  CustomScrollView(slivers: [
+    return  CustomScrollView(
+      slivers: [
       SliverFillRemaining(
+         hasScrollBody: false,
           child: Padding(
-        padding:const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
+        padding:const EdgeInsets.symmetric(horizontal: 30.0, vertical: 16.0),
         child: Column(
           children: [
           const  CustomBookDetailesAppBar(),

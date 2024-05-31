@@ -1,4 +1,5 @@
 import 'package:bookly/Features/home/data/model/book_models/book_models.dart';
+import 'package:bookly/core/utils/function/launch_url.dart';
 import 'package:bookly/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -23,11 +24,8 @@ final BookModels book;
           )),
           Expanded(
               child: CustomButton(
-                onPressed: () async{
-                  final Uri  url = Uri.parse(book.volumeInfo.previewLink!);
-                  if (await canLaunchUrl(url) ) {
-                    await launchUrl(url);
-                  }
+                onPressed: () {
+                 launchCustomUr(context, book.volumeInfo.previewLink);
 
                 },
             text: 'Preview',
